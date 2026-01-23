@@ -5,19 +5,19 @@ const articles = [
         id: 1,
         tag: "Design",
         title: "10 Principles of Sustainable Architecture",
-        image: "/WhatsApp Image 2026-01-21 at 11.50.39 PM (8).jpeg"
+        image: "/spacejoy-RUvW1KGD9a4-unsplash.jpg"
     },
     {
         id: 2,
         tag: "Innovation",
         title: "The Future of Urban Living Spaces",
-        image: "/WhatsApp Image 2026-01-21 at 11.50.49 PM.jpeg"
+        image: "/spacejoy-XpbtQfr9Skg-unsplash.jpg"
     },
     {
         id: 3,
         tag: "History",
         title: "Restoring Heritage Buildings: A Guide",
-        image: "/WhatsApp Image 2026-01-21 at 11.50.49 PM (1).jpeg"
+        image: "/spacejoy-YI2YkyaREHk-unsplash.jpg"
     }
 ];
 

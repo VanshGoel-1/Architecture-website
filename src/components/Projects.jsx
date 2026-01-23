@@ -4,12 +4,12 @@ const projects = [
     {
         id: 1,
         title: "Alpine Retreat",
-        location: "8 Marina View, Singapore 018960",
+        location: "Marina Bay District, Singapore",
         year: "2023",
         area: "250,000 sq ft.",
         category: "Residential",
         desc: "A sophisticated blend of alpine tradition and modern luxury, creating a warm yet expansive living environment.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (25).jpeg"
+        image: "/stephan-bechert-yFV39g6AZ5o-unsplash.jpg"
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const projects = [
         area: "180,000 sq ft.",
         category: "Residential",
         desc: "Designed to blend seamlessly with the arid landscape, offering cool respite and breathtaking desert views.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (3).jpeg"
+        image: "/ionut-vlad-idXQEOxhmvU-unsplash.jpg"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const projects = [
         area: "120,000 sq ft.",
         category: "Commercial",
         desc: "An industrial-chic workspace that fosters creativity and collaboration in the heart of the city.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (5).jpeg"
+        image: "/im3rd-media-CbZ4EDP__VQ-unsplash.jpg"
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const projects = [
         area: "300,000 sq ft.",
         category: "Resort",
         desc: "A luxurious coastal sanctuary designed to capture the essence of ocean living with panoramic views.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (1).jpeg"
+        image: "/iltun-huseynli-OH7GkUqiuZk-unsplash.jpg"
     }
 ];
 

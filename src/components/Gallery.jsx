@@ -1,12 +1,12 @@
 import styles from './Gallery.module.css';
 
 const images = [
-    "/WhatsApp Image 2026-01-21 at 11.50.39 PM (2).jpeg",
-    "/WhatsApp Image 2026-01-21 at 11.50.39 PM (3).jpeg",
-    "/WhatsApp Image 2026-01-21 at 11.50.39 PM (4).jpeg",
-    "/WhatsApp Image 2026-01-21 at 11.50.39 PM (5).jpeg",
-    "/WhatsApp Image 2026-01-21 at 11.50.39 PM (6).jpeg",
-    "/WhatsApp Image 2026-01-21 at 11.50.39 PM (7).jpeg"
+    "/cat-han-VgyN_CWXQVM-unsplash.jpg",
+    "/collov-home-design-H-1j_s0dhCw-unsplash.jpg",
+    "/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg",
+    "/kam-idris-_HqHX3LBN18-unsplash.jpg",
+    "/spacejoy-9M66C_w_ToM-unsplash.jpg",
+    "/spacejoy-PyeXkOVmG1Y-unsplash.jpg"
 ];
 
 export default function Gallery() {

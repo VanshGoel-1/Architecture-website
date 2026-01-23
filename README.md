@@ -1,16 +1,43 @@
-# React + Vite
+# Prisha Architecture & Interiors
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for an architecture and interior design firm, built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern UI/UX**: Clean and sophisticated design tailored for architecture portfolios.
+- **Service Showcase**: Detailed sections for Architecture, Interior Design, and Landscape planning.
+- **Project Gallery**: Visual grid displaying completed projects.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop devices.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: CSS Modules / Vanilla CSS
 
-## Expanding the ESLint configuration
+## Setup & Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/VanshGoel-1/Architecture-website.git
+    cd Architecture-website
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+## Project Structure
+
+- `src/components`: Reusable UI components (Navbar, Footer, Services, etc.)
+- `src/pages`: Main page layouts (Home, Projects, etc.)
+- `public/`: Static assets (Images, icons)
+
+---
+*Note: Some sensitive assets (e.g., specific project images) may be excluded from this repository.*

@@ -7,19 +7,19 @@ const projects = [
         id: 1,
         title: "Aurora Hills",
         category: "Residential Complex",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (19).jpeg"
+        image: "/rowan-heuvel-bjej8BY1JYQ-unsplash.jpg"
     },
     {
         id: 2,
         title: "Urban Oasis",
         category: "Commercial Hub",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (20).jpeg"
+        image: "/joel-filipe-RFDP7_80v5A-unsplash.jpg"
     },
     {
         id: 3,
         title: "Skyline Tower",
         category: "Skyscraper",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (21).jpeg"
+        image: "/pixasquare-4ojhpgKpS68-unsplash.jpg"
     }
 ];
 

@@ -6,21 +6,21 @@ const team = [
         name: "Katie Harper",
         role: "Founder",
         quote: "Architecture is about creating memories.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (22).jpeg"
+        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80"
     },
     {
         id: 2,
         name: "Ethan Wei Jie",
         role: "Creative Director",
         quote: "Every line drawn has a purpose.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (23).jpeg"
+        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
     },
     {
         id: 3,
         name: "James Lee",
         role: "Lead Architect",
         quote: "Sustainability is at the heart of design.",
-        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (24).jpeg"
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
     }
 ];
 

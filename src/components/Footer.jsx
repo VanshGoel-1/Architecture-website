@@ -51,14 +51,14 @@ export default function Footer() {
                         <div className={styles.footerBrand}>
                             <p>Elysian Environments</p>
                             <a href="https://maps.google.com" target="_blank" rel="noreferrer" className={styles.footerLink}>
-                                <p>Mota Singh Nagar</p>
-                                <p>Jalandhar, Punjab</p>
+                                <p>123 Innovation Drive</p>
+                                <p>Design City, ST 12345</p>
                             </a>
                         </div>
 
                         <div className={styles.footerContact}>
-                            <a href="tel:+916280863197" className={styles.footerLink} style={{ display: 'block' }}>+91 6280863197</a>
-                            <a href="mailto:elysianenvironemts@gmail.com" className={styles.footerLink} style={{ display: 'block' }}>elysianenvironemts@gmail.com</a>
+                            <a href="tel:+15551234567" className={styles.footerLink} style={{ display: 'block' }}>+1 (555) 123-4567</a>
+                            <a href="mailto:jondoe@example.com" className={styles.footerLink} style={{ display: 'block' }}>jondoe@example.com</a>
                         </div>
 
                         <div className={styles.footerSocial}>

@@ -96,13 +96,13 @@ export default function MenuOverlay({ isOpen, onClose }) {
                                         rel="noreferrer"
                                         className={styles.footerLink}
                                     >
-                                        Mota Singh Nagar<br />Jalandhar, Punjab
+                                        123 Innovation Drive<br />Design City, ST 12345
                                     </a>
                                 </div>
 
                                 <div className={styles.contactBlock}>
-                                    <a href="tel:+916280863197" className={styles.footerLink} style={{ display: 'block' }}>+91 6280863197</a>
-                                    <a href="mailto:elysianenvironemts@gmail.com" className={styles.footerLink} style={{ display: 'block' }}>info@elysian.com</a>
+                                    <a href="tel:+15551234567" className={styles.footerLink} style={{ display: 'block' }}>+1 (555) 123-4567</a>
+                                    <a href="mailto:jondoe@example.com" className={styles.footerLink} style={{ display: 'block' }}>jondoe@example.com</a>
                                 </div>
 
                                 <div className={styles.socialBlock}>
