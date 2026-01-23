@@ -1,0 +1,107 @@
+.section {
+    padding: 10vh 5vw;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 20vh;
+    /* Large spacer between steps */
+    gap: 5vw;
+}
+
+.stickyColumn {
+    flex: 0 0 200px;
+    /* This makes the number stick! */
+    position: sticky;
+    top: 50vh;
+    /* Stick to the middle of the viewport */
+    height: fit-content;
+}
+
+.number {
+    font-family: 'Playfair Display', serif;
+    font-size: 12vw;
+    /* Massive numbers */
+    line-height: 0.8;
+    color: var(--accent);
+    opacity: 0.2;
+}
+
+.contentColumn {
+    flex: 1;
+    padding-top: 5vh;
+    /* Slight offset */
+}
+
+.label {
+    text-transform: uppercase;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    opacity: 0.8;
+}
+
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 4px;
+    /* Slight rounding */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease-out;
+}
+
+.step:hover .image {
+    transform: scale(1.05);
+    /* Zoom on hover of the whole step */
+}
+
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+        margin-bottom: 15vh;
+    }
+
+    .stickyColumn {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .number {
+        font-size: 5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}

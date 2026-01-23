@@ -1,0 +1,179 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    /* Ensure content aligns */
+}
+
+/* Background Slider */
+.backgroundContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Lowest level, but above base container bkg */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark gradient from bottom to top for readability */
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2;
+}
+
+/* Massive Parallax Text */
+.bigText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centered */
+
+    font-family: var(--font-heading);
+    font-size: clamp(8rem, 20vw, 25rem);
+    /* Huge responsive text */
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    white-space: nowrap;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 3;
+    /* Behind content (4), above bg (1) and overlay (2)?? 
+                 Wait, if it's "behind" content, it should be low opacity. 
+                 Let's make it sit between image and main content.
+              */
+    mix-blend-mode: overlay;
+    /* Blends nicely with the image */
+}
+
+/* Main Content */
+.content {
+    position: relative;
+    z-index: 10;
+    /* Above everything */
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Bottom alignment */
+}
+
+.bottomLeft {
+    margin-bottom: 4rem;
+    max-width: 600px;
+}
+
+.projectCounter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.textWrapper {
+    margin-bottom: 2rem;
+}
+
+.projectTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.projectDesc {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 450px;
+}
+
+/* Pill Button */
+.ctaButton {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
+    /* Pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.ctaButton:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.navButton {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.navButton:hover {
+    background: #fff;
+    color: #000;
+}

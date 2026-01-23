@@ -1,0 +1,51 @@
+.section {
+    padding: 8rem 2rem;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    text-align: center;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+}
+
+.grid {
+    column-count: 3;
+    column-gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.item {
+    margin-bottom: 2rem;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.item:hover .image {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        column-count: 1;
+    }
+}

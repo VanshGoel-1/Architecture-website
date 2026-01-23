@@ -1,0 +1,39 @@
+:root {
+  --color-bg: #452b1f; /* Brown form Audit */
+  --color-accent: #FFF3DB; /* Cream */
+  --color-text-main: #FFFFFF;
+  --color-text-dark: #452b1f; 
+  --color-service-bg: #2C2C2C; /* Dark blue-gray fallback */
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Manrope', 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* Utilities */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

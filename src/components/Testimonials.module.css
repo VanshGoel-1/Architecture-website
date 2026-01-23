@@ -1,0 +1,105 @@
+.section {
+    padding: 8rem 2rem;
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-accent);
+    font-weight: 400;
+}
+
+.scrollContainer {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    scroll-behavior: smooth;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-left: 2rem;
+    /* Initial padding */
+}
+
+.scrollContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    min-width: 450px;
+    background-color: #F8F5F2;
+    /* Cream/Off-white background from image */
+    color: #452b1f;
+    /* Dark brown text */
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.cardHeader {
+    border-bottom: 1px solid rgba(69, 43, 31, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.author {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: #452b1f;
+}
+
+.role {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+}
+
+.quote {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    opacity: 0.9;
+}
+
+.imageWrapper {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%);
+    /* Slight mute */
+}
+
+@media (max-width: 768px) {
+    .card {
+        min-width: 300px;
+        padding: 2rem;
+    }
+}

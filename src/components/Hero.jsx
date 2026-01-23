@@ -1,0 +1,101 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import styles from './Hero.module.css';
+
+const projects = [
+    {
+        id: 1,
+        title: "Aurora Hills",
+        category: "Residential Complex",
+        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (19).jpeg"
+    },
+    {
+        id: 2,
+        title: "Urban Oasis",
+        category: "Commercial Hub",
+        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (20).jpeg"
+    },
+    {
+        id: 3,
+        title: "Skyline Tower",
+        category: "Skyscraper",
+        image: "/WhatsApp Image 2026-01-21 at 11.35.47 PM (21).jpeg"
+    }
+];
+
+export default function Hero() {
+    const [current, setCurrent] = useState(0);
+
+    const nextSlide = () => {
+        setCurrent((prev) => (prev + 1) % projects.length);
+    };
+
+    const prevSlide = () => {
+        setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
+    };
+
+    useEffect(() => {
+        const timer = setInterval(nextSlide, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
+    return (
+        <section className={styles.hero}>
+            <AnimatePresence mode="popLayout">
+                <motion.div
+                    key={current}
+                    className={styles.backgroundContainer}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                >
+                    <img src={projects[current].image} alt={projects[current].title} className={styles.image} />
+                    <div className={styles.overlay} />
+                </motion.div>
+            </AnimatePresence>
+
+            {/* Parallax Background Text */}
+            <motion.div
+                className={styles.bigText}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 0.15, y: 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+                ELYSIAN
+            </motion.div>
+
+            <div className={styles.content}>
+                <div className={styles.bottomLeft}>
+                    <div className={styles.projectCounter}>
+                        <span className={styles.dot}></span>
+                        Project {current + 1}/{projects.length}
+                    </div>
+
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={current}
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -20, opacity: 0 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className={styles.textWrapper}
+                        >
+                            <h1 className={styles.projectTitle}>{projects[current].title}</h1>
+                            <p className={styles.projectDesc}>
+                                A stylish living experience with green spaces, wellness facilities, and a vibrant neighborhood.
+                            </p>
+                        </motion.div>
+                    </AnimatePresence>
+
+                    <button className={styles.ctaButton}>Learn More</button>
+                </div>
+
+                <div className={styles.controls}>
+                    <button onClick={prevSlide} className={styles.navButton}>&larr;</button>
+                    <button onClick={nextSlide} className={styles.navButton}>&rarr;</button>
+                </div>
+            </div>
+        </section>
+    );
+}
