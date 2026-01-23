@@ -1,4 +1,4 @@
-#Architecture & Interiors
+# Architecture & Interiors
 
 A modern, responsive website for an architecture and interior design firm, built with React and Vite.
 
