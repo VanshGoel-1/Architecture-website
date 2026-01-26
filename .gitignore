@@ -26,3 +26,4 @@ dist-ssr
 # Sensitive Images
 **/*WhatsApp Image*
 .agent
+src/assets/*.svg
