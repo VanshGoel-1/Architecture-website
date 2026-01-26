@@ -7,7 +7,7 @@
 .hero {
     height: 70vh;
     width: 100%;
-    background-image: url('/WhatsApp Image 2026-01-21 at 11.35.47 PM (18).jpeg');
+    background-image: url('/spacejoy-YI2YkyaREHk-unsplash.jpg');
     /* Custom Hero Image */
     background-size: cover;
     background-position: center;
@@ -95,6 +95,10 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+
+    /* Ensure image is strictly below overlay */
+    position: relative;
+    z-index: 1;
 }
 
 .card:hover .cardImage {
@@ -108,13 +112,23 @@
     left: 0;
     width: 100%;
     padding: 2rem;
-    background: linear-gradient(to top, rgba(69, 43, 31, 0.9), transparent);
+
+    /* Low Fade Gradient: Transparent -> Brand Brown (#452b1f) */
+    /* Matches Framer 'Fill: #H-100' setting */
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(69, 43, 31, 0.4) 60%,
+            rgba(69, 43, 31, 0.95) 100%);
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     opacity: 1;
-    /* Always visible based on screenshot */
+    /* Always visible */
     height: 100%;
+
+    z-index: 10;
+    /* Sit above image */
 }
 
 .cardTags {
@@ -168,6 +182,8 @@
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
+    z-index: 3;
+    /* Ensure button clickable */
 }
 
 .card:hover .viewBtn {

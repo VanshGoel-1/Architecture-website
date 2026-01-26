@@ -23,7 +23,7 @@ export default function About() {
                     transition={{ delay: 0.2, duration: 1 }}
                 >
                     <img
-                        src="/WhatsApp Image 2026-01-21 at 11.50.38 PM.jpeg"
+                        src="/stephan-bechert-yFV39g6AZ5o-unsplash.jpg"
                         alt="Architectural Detail"
                         className={styles.heroImage}
                     />

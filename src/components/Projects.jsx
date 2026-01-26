@@ -53,7 +53,13 @@ export default function Projects() {
             <div className={styles.grid}>
                 {projects.map((project) => (
                     <div key={project.id} className={styles.card}>
-                        <img src={project.image} alt={project.title} className={styles.image} />
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className={styles.image}
+                            loading="lazy"
+                            decoding="async"
+                        />
 
                         {/* Single Expanding Glass Overlay */}
                         <div className={styles.infoOverlay}>

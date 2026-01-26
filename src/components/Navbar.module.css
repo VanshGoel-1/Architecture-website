@@ -14,15 +14,39 @@
     transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-.logo {
+.lightMode {
+    color: #452b1f;
+    /* Dark brown for light pages */
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.logoImg {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    /* Use mask to allow currentColor to color the SVG asset */
+    background-color: currentColor;
+    mask-image: url('../assets/ee_logo1.svg');
+    -webkit-mask-image: url('../assets/ee_logo1.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+
+.logoText {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    cursor: pointer;
-    z-index: 1001;
-    /* Ensure clickable over overlay if needed */
 }
 
 .actions {
@@ -69,6 +93,11 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     transition: transform 0.2s ease;
+}
+
+.darkBtn {
+    background: #452b1f;
+    color: #fff;
 }
 
 .menuBtn:hover {

@@ -63,10 +63,17 @@
     inset: 0;
     padding: 2rem;
 
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Low Fade: Transparent top -> Dark bottom */
+    /* Using a deep neutral black/brown mix for better contrast and legibility */
+    background: linear-gradient(to bottom,
+            transparent 40%,
+            rgba(20, 15, 10, 0.6) 70%,
+            rgba(20, 15, 10, 0.95) 100%);
+
+    /* Removed glass border/blur - switched to fade */
+    border-top: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     display: flex;
     flex-direction: column;
@@ -92,10 +99,14 @@
     opacity: 1;
     transform: translateY(0);
 
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    /* Maintained gradient on hover - slightly darker for text pop */
+    background: linear-gradient(to bottom,
+            transparent 30%,
+            rgba(20, 15, 10, 0.7) 60%,
+            rgba(20, 15, 10, 1) 100%);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-top: none;
 
     /* ENTRY = intentionally slower */
     transition:
