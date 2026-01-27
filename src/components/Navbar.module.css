@@ -1,148 +1,164 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  /* High z-index */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 3rem;
-  color: #e8dcc4;
-  /* Default to cream/beige */
-  transition:
-    background-color 0.3s ease,
-    padding 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* High z-index */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    color: #e8dcc4;
+    /* Default to cream/beige */
+    transition:
+        background-color 0.3s ease,
+        padding 0.3s ease;
 }
 
 .lightMode {
-  color: #452b1f;
-  /* Dark brown for light pages */
+    color: #452b1f;
+    /* Dark brown for light pages */
 }
 
 .logoContainer {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  cursor: pointer;
-  z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 .logoImg {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  /* Use mask to allow currentColor to color the SVG asset */
-  background-color: currentColor;
-  mask-image: url('../assets/ee_logo1.svg');
-  -webkit-mask-image: url('../assets/ee_logo1.svg');
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-size: contain;
-  -webkit-mask-size: contain;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    /* Use mask to allow currentColor to color the SVG asset */
+    background-color: currentColor;
+    mask-image: url('../assets/ee_logo1.svg');
+    -webkit-mask-image: url('../assets/ee_logo1.svg');
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
 }
 
 .logoText {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .actions {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1001;
 }
 
 .contactBtn {
-  background: none;
-  border: 1px solid rgba(232, 220, 196, 0.3);
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  color: inherit;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: none;
+    border: 1px solid rgba(232, 220, 196, 0.3);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    color: inherit;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .contactBtn:hover {
-  background: rgba(232, 220, 196, 0.1);
-  border-color: #e8dcc4;
+    background: rgba(232, 220, 196, 0.1);
+    border-color: #e8dcc4;
 }
 
 .menuBtn {
-  background: #e8dcc4;
-  /* Solid pill for menu button */
-  border: none;
-  padding: 0.6rem 1.4rem;
-  border-radius: 50px;
-  color: #3e2f26;
-  /* Dark text for contrast */
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: transform 0.2s ease;
+    background: #e8dcc4;
+    /* Solid pill for menu button */
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    color: #3e2f26;
+    /* Dark text for contrast */
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease;
 }
 
 .darkBtn {
-  background: #452b1f;
-  color: #fff;
+    background: #452b1f;
+    color: #fff;
 }
 
 .menuBtn:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .burger {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 18px;
 }
 
 .line {
-  width: 100%;
-  height: 1.5px;
-  /* Slightly thicker */
-  background-color: currentColor;
-  /* Uses the button's text color */
-  transition: all 0.3s ease;
+    width: 100%;
+    height: 1.5px;
+    /* Slightly thicker */
+    background-color: currentColor;
+    /* Uses the button's text color */
+    transition: all 0.3s ease;
 }
 
 /* Burger Animation State */
 .active .line:nth-child(1) {
-  transform: translateY(2.5px) rotate(45deg);
+    transform: translateY(2.5px) rotate(45deg);
 }
 
 .active .line:nth-child(2) {
-  transform: translateY(-2.5px) rotate(-45deg);
+    transform: translateY(-2.5px) rotate(-45deg);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 1.5rem;
-  }
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
 
-  .contactBtn {
-    display: none;
-    /* Hide Contact button on mobile */
-  }
+    .contactBtn {
+        display: none;
+        /* Hide Contact button on mobile */
+    }
 
-  .logo {
-    font-size: 1rem;
-  }
+    .logoContainer {
+        gap: 0.8rem;
+    }
+
+    .logoImg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logoText {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        max-width: 120px;
+    }
+
+    .menuBtn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
 }
