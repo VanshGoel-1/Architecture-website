@@ -44,13 +44,15 @@ export default function Gallery() {
         restDelta: 0.001
     });
 
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
     // Transform logic (linked to smoothProgress instead of raw scrollYProgress):
     // Col 1 & 3: Move UP (negative y) faster (approx 1.5x speed relative to scroll)
     // Col 2 & 4: Move DOWN (positive y) slower (approx 0.5x speed opposite to scroll)
-    const y1 = useTransform(smoothProgress, [0, 1], [0, -600]);
-    const y2 = useTransform(smoothProgress, [0, 1], [0, 200]);
-    const y3 = useTransform(smoothProgress, [0, 1], [0, -750]);
-    const y4 = useTransform(smoothProgress, [0, 1], [0, 150]);
+    const y1 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : -600]);
+    const y2 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : 200]);
+    const y3 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : -750]);
+    const y4 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : 150]);
 
     // Squash and Stretch Logic based on Velocity
     const velocity = useVelocity(smoothProgress);
