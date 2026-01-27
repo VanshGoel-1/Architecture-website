@@ -66,24 +66,11 @@ export default function Gallery() {
     const stretch = useTransform(scrollVelocity, [-0.5, 0, 0.5], [1.1, 1, 1.1]);
     const squash = useTransform(scrollVelocity, [-0.5, 0, 0.5], [0.95, 1, 0.95]);
 
-    // Map vertical scroll to horizontal movement for mobile
-    // 0 -> 0%, 1 -> -350% (move left to show all content)
-    const smoothX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
-
-    const x = useTransform(smoothX, [0, 1], ["0%", "-350%"]);
-
     return (
         <section className={styles.section} ref={containerRef}>
             <div className={styles.backgroundText}>GALLERY</div>
 
-            <motion.div
-                className={styles.galleryWrapper}
-                style={{ x: isMobile ? x : 0 }}
-            >
+            <div className={styles.galleryWrapper}>
                 <motion.div style={{ y: y1 }} className={styles.column}>
                     {column1.map((src, i) => (
                         <div key={i} className={styles.imageContainer}>
@@ -163,7 +150,7 @@ export default function Gallery() {
                         </div>
                     ))}
                 </motion.div>
-            </motion.div>
+            </div>
         </section>
     );
 }

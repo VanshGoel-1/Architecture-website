@@ -92,35 +92,28 @@
 
 @media (max-width: 768px) {
     .section {
-        height: 600vh;
-        /* Long scroll track */
+        height: auto;
         min-height: auto;
-        padding: 0;
+        padding: 4rem 0;
         overflow: visible;
-        /* Allow sticky to work */
-        background-color: #3e2f26;
-        /* Ensure background matches */
     }
 
     .galleryWrapper {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        height: 100vh;
-        /* Full viewport height */
+        height: auto;
         padding: 0 1.5rem;
         gap: 1.5rem;
+        /* Space between columns */
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
 
-        /* Sticky positioning to hold it while we scroll the section */
-        position: sticky;
-        top: 0;
-
-        overflow: hidden;
-        /* Hide scrollbars, we use transform now */
-        width: max-content;
-        /* Let it grow as wide as needs be */
-        align-items: center;
-        /* Center images vertically */
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
     .galleryWrapper::-webkit-scrollbar {
@@ -130,18 +123,22 @@
     .column {
         display: flex;
         flex-direction: row;
+        /* Images flow horizontally inside column */
         gap: 1.5rem;
+        /* Space between images in the same column */
         margin-top: 0 !important;
         transform: none !important;
         flex-shrink: 0;
+        /* Prevent column from squashing */
     }
 
     .imageContainer {
-        width: 80vw;
-        /* Slightly wider for the scroll effect */
+        width: 70vw;
+        /* Reduced size to fit phone screen nicely */
         height: auto;
         aspect-ratio: 3/4;
         flex-shrink: 0;
+        scroll-snap-align: center;
         padding: 0;
     }
 
