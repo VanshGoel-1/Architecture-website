@@ -57,7 +57,7 @@ export default function Hero() {
             fetchpriority="high"
             decoding="async"
           />
-          <div className={styles.overlay} />
+          <div className={styles.cardOverlay} />
         </motion.div>
       </AnimatePresence>
 
