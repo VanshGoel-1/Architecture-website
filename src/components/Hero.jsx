@@ -3,99 +3,108 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Hero.module.css';
 
 const projects = [
-    {
-        id: 1,
-        title: "Aurora Hills",
-        category: "Residential Complex",
-        image: "/rowan-heuvel-bjej8BY1JYQ-unsplash.jpg"
-    },
-    {
-        id: 2,
-        title: "Urban Oasis",
-        category: "Commercial Hub",
-        image: "/joel-filipe-RFDP7_80v5A-unsplash.jpg"
-    },
-    {
-        id: 3,
-        title: "Skyline Tower",
-        category: "Skyscraper",
-        image: "/pixasquare-4ojhpgKpS68-unsplash.jpg"
-    }
+  {
+    id: 1,
+    title: 'Aurora Hills',
+    category: 'Residential Complex',
+    image: '/rowan-heuvel-bjej8BY1JYQ-unsplash.jpg',
+  },
+  {
+    id: 2,
+    title: 'Urban Oasis',
+    category: 'Commercial Hub',
+    image: '/joel-filipe-RFDP7_80v5A-unsplash.jpg',
+  },
+  {
+    id: 3,
+    title: 'Skyline Tower',
+    category: 'Skyscraper',
+    image: '/pixasquare-4ojhpgKpS68-unsplash.jpg',
+  },
 ];
 
 export default function Hero() {
-    const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
 
-    const nextSlide = () => {
-        setCurrent((prev) => (prev + 1) % projects.length);
-    };
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % projects.length);
+  };
 
-    const prevSlide = () => {
-        setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
-    };
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
+  };
 
-    useEffect(() => {
-        const timer = setInterval(nextSlide, 5000);
-        return () => clearInterval(timer);
-    }, []);
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
-    return (
-        <section className={styles.hero}>
-            <AnimatePresence mode="popLayout">
-                <motion.div
-                    key={current}
-                    className={styles.backgroundContainer}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                >
-                    <img src={projects[current].image} alt={projects[current].title} className={styles.image} />
-                    <div className={styles.overlay} />
-                </motion.div>
-            </AnimatePresence>
+  return (
+    <section className={styles.hero}>
+      <AnimatePresence mode="popLayout">
+        <motion.div
+          key={current}
+          className={styles.backgroundContainer}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <img
+            src={projects[current].image}
+            alt={projects[current].title}
+            className={styles.image}
+          />
+          <div className={styles.overlay} />
+        </motion.div>
+      </AnimatePresence>
 
-            {/* Parallax Background Text */}
+      {/* Parallax Background Text */}
+      <motion.div
+        className={styles.bigText}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 0.15, y: 0 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+      >
+        ELYSIAN
+      </motion.div>
+
+      <div className={styles.content}>
+        <div className={styles.bottomLeft}>
+          <div className={styles.projectCounter}>
+            <span className={styles.dot}></span>
+            Project {current + 1}/{projects.length}
+          </div>
+
+          <AnimatePresence mode="wait">
             <motion.div
-                className={styles.bigText}
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 0.15, y: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
+              key={current}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className={styles.textWrapper}
             >
-                ELYSIAN
+              <h1 className={styles.projectTitle}>{projects[current].title}</h1>
+              <p className={styles.projectDesc}>
+                A stylish living experience with green spaces, wellness facilities, and a vibrant
+                neighborhood.
+              </p>
             </motion.div>
+          </AnimatePresence>
 
-            <div className={styles.content}>
-                <div className={styles.bottomLeft}>
-                    <div className={styles.projectCounter}>
-                        <span className={styles.dot}></span>
-                        Project {current + 1}/{projects.length}
-                    </div>
+          <button className={styles.ctaButton}>Learn More</button>
+        </div>
 
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={current}
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -20, opacity: 0 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                            className={styles.textWrapper}
-                        >
-                            <h1 className={styles.projectTitle}>{projects[current].title}</h1>
-                            <p className={styles.projectDesc}>
-                                A stylish living experience with green spaces, wellness facilities, and a vibrant neighborhood.
-                            </p>
-                        </motion.div>
-                    </AnimatePresence>
-
-                    <button className={styles.ctaButton}>Learn More</button>
-                </div>
-
-                <div className={styles.controls}>
-                    <button onClick={prevSlide} className={styles.navButton}>&larr;</button>
-                    <button onClick={nextSlide} className={styles.navButton}>&rarr;</button>
-                </div>
-            </div>
-        </section>
-    );
+        <div className={styles.controls}>
+          <button onClick={prevSlide} className={styles.navButton}>
+            &larr;
+          </button>
+          <button onClick={nextSlide} className={styles.navButton}>
+            &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,167 +1,167 @@
 .page {
-    background-color: var(--color-accent);
-    /* Cream background */
-    min-height: 100vh;
-    padding-top: 100px;
-    /* Space for fixed navbar */
-    color: var(--color-text-dark);
+  background-color: var(--color-accent);
+  /* Cream background */
+  min-height: 100vh;
+  padding-top: 100px;
+  /* Space for fixed navbar */
+  color: var(--color-text-dark);
 }
 
 /* Hero */
 .hero {
-    padding: 4rem 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    text-align: center;
+  padding: 4rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .title {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 3rem;
-    color: #452b1f;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  color: #452b1f;
 }
 
 .heroImageWrapper {
-    width: 100%;
-    height: 60vh;
-    border-radius: 20px;
-    overflow: hidden;
+  width: 100%;
+  height: 60vh;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .heroImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Why Choose Section */
 .whySection {
-    padding: 8rem 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
+  padding: 8rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .sectionHeading {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 400;
-    margin-bottom: 4rem;
-    color: #452b1f;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  color: #452b1f;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .gridColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .columnDown {
-    margin-top: 8rem;
-    /* Stagger effect */
+  margin-top: 8rem;
+  /* Stagger effect */
 }
 
 .gridItem {
-    background: #fff;
-    padding: 1rem;
-    /* No border or shadow per "clean" look, maybe subtle shadow if needed */
+  background: #fff;
+  padding: 1rem;
+  /* No border or shadow per "clean" look, maybe subtle shadow if needed */
 }
 
 .gridImage {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
 }
 
 .gridContent h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #452b1f;
-    font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #452b1f;
+  font-weight: 400;
 }
 
 .gridContent p {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #666;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
 }
 
 /* Architects Section */
 .architectsSection {
-    padding: 8rem 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    gap: 4rem;
+  padding: 8rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
 }
 
 .architectsContent {
-    flex: 1;
+  flex: 1;
 }
 
 .architectsContent h2 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #452b1f;
-    position: sticky;
-    top: 150px;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #452b1f;
+  position: sticky;
+  top: 150px;
 }
 
 .architectsGrid {
-    flex: 1.5;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .largeProfile {
-    grid-column: span 2;
-    height: 400px;
+  grid-column: span 2;
+  height: 400px;
 }
 
 .smallProfile {
-    height: 250px;
+  height: 250px;
 }
 
 .mediumProfile {
-    grid-column: span 2;
-    height: 300px;
+  grid-column: span 2;
+  height: 300px;
 }
 
 .architectsGrid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 900px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-    .columnDown {
-        margin-top: 0;
-    }
+  .columnDown {
+    margin-top: 0;
+  }
 
-    .architectsSection {
-        flex-direction: column;
-    }
+  .architectsSection {
+    flex-direction: column;
+  }
 
-    .architectsContent h2 {
-        position: static;
-        margin-bottom: 2rem;
-    }
+  .architectsContent h2 {
+    position: static;
+    margin-bottom: 2rem;
+  }
 }

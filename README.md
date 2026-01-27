@@ -18,12 +18,14 @@ A modern, responsive website for an architecture and interior design firm, built
 ## Setup & Run
 
 1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/VanshGoel-1/Architecture-website.git
     cd Architecture-website
     ```
 
 2.  **Install dependencies:**
+
     ```bash
     npm install
     ```
@@ -40,4 +42,5 @@ A modern, responsive website for an architecture and interior design firm, built
 - `public/`: Static assets (Images, icons)
 
 ---
-*Note: Some sensitive assets (e.g., specific project images) may be excluded from this repository.*
+
+_Note: Some sensitive assets (e.g., specific project images) may be excluded from this repository._

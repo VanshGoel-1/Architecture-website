@@ -1,10 +1,10 @@
 :root {
   --color-bg: #452b1f; /* Brown form Audit */
-  --color-accent: #FFF3DB; /* Cream */
-  --color-text-main: #FFFFFF;
-  --color-text-dark: #452b1f; 
-  --color-service-bg: #2C2C2C; /* Dark blue-gray fallback */
-  
+  --color-accent: #fff3db; /* Cream */
+  --color-text-main: #ffffff;
+  --color-text-dark: #452b1f;
+  --color-service-bg: #2c2c2c; /* Dark blue-gray fallback */
+
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Manrope', 'Inter', sans-serif;
 }

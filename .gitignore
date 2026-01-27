@@ -1,21 +1,30 @@
-# Logs
-logs
-*.log
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Reports and temporary audit files
+ux_report.txt
+lint_report.json
+test_output.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Environment
+.env
+.env.local
+.env.production
+.env.development
 
-# Editor directories and files
+# Vercel
+.vercel
+
+# IDE/Editor
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -23,7 +32,26 @@ dist-ssr
 *.sln
 *.sw?
 
-# Sensitive Images
-**/*WhatsApp Image*
+# Testing
+test
+coverage/
+
+# OS specific
+Thumbs.db
+Desktop.ini
+
+# Agent Runtime (if applicable - usually brain/ results should be ignored but skills kept)
 .agent
-src/assets/*.svg
+.agent/scripts/__pycache__/
+*.pyc
+
+# Project specific
+**/*WhatsApp Image*
+src/assets/temp/
+.prettierrc
+eslint.config.js
+ux_audit.py
+design_system_rec.md
+checklist.py
+
+eslint.config.js

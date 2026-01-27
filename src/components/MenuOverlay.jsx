@@ -1,22 +1,28 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import styles from "./MenuOverlay.module.css";
-// You might need an image import here if you have a local asset, 
-// for now using a placeholder or a reliable URL if available, 
-// or simply a div placeholder.
-// Assuming we have an asset or will use a colored block/placeholder.
+import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import styles from './MenuOverlay.module.css';
+
+const navItems = [
+    { label: 'About', path: '/about' },
+    { label: 'Services', path: '/#services', count: '08' },
+    { label: 'Projects', path: '/projects', count: '06' },
+    { label: 'Team', path: '/team', count: '08' },
+    { label: 'Blogs', path: '/blogs', count: '05' },
+    { label: 'Contact', path: '/#contact' },
+];
 
 export default function MenuOverlay({ isOpen, onClose }) {
     const navigate = useNavigate();
 
     const handleNav = (path) => {
         onClose();
-        if (path.startsWith("/#")) {
+        if (path.startsWith('/#')) {
             const hash = path.substring(2);
-            navigate("/");
+            navigate('/');
             setTimeout(() => {
                 const el = document.getElementById(hash);
-                if (el) el.scrollIntoView({ behavior: "smooth" });
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
             }, 100);
         } else {
             navigate(path);
@@ -28,93 +34,71 @@ export default function MenuOverlay({ isOpen, onClose }) {
             {isOpen && (
                 <motion.div
                     className={styles.overlayWrapper}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{ y: '-100%' }}
+                    animate={{ y: '0%' }}
+                    exit={{ y: '-100%' }}
+                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
                 >
-                    {/* LEFT PANEL - Dark Brown with Image */}
-                    <motion.div
-                        className={styles.leftPanel}
-                        initial={{ x: "-100%" }}
-                        animate={{ x: "0%" }}
-                        exit={{ x: "-100%" }}
-                        transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-                    >
-                        <div className={styles.leftContent}>
-                            <div className={styles.branding}>
-                                ELYSIAN <br /> ENVIRONMENTS
-                            </div>
-
-                            <div className={styles.imageContainer}>
-                                {/* Placeholder for the person/architecture image */}
-                                <img
-                                    src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Interior Design"
-                                    className={styles.featureImage}
-                                />
-                            </div>
-
-                            <div className={styles.leftFooter}>
-                                <h2 className={styles.tagline}>Designing spaces <br /> that inspire</h2>
-                                <p className={styles.leftCopyright}>©2025 ELYSIAN Environments. All right reserved.</p>
-                            </div>
+                    <div className={styles.container}>
+                        <div className={styles.header}>
+                            <div className={styles.branding}>ELYSIAN</div>
+                            <button onClick={onClose} className={styles.closeBtn} aria-label="Close menu">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M18 6L6 18M6 6l12 12"
+                                        stroke="currentColor"
+                                        strokeWidth="1.5"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                            </button>
                         </div>
-                    </motion.div>
 
-                    {/* RIGHT PANEL - Cream with Links */}
-                    <motion.div
-                        className={styles.rightPanel}
-                        initial={{ x: "100%" }}
-                        animate={{ x: "0%" }}
-                        exit={{ x: "100%" }}
-                        transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-                    >
-                        <button onClick={onClose} className={styles.closeBtn}>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 6L6 18" stroke="#5d4a3f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M6 6L18 18" stroke="#5d4a3f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </button>
+                        <nav className={styles.nav}>
+                            {navItems.map((item, index) => (
+                                <motion.div
+                                    key={item.label}
+                                    className={styles.navItem}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 * index + 0.4 }}
+                                    onClick={() => handleNav(item.path)}
+                                >
+                                    <span className={styles.navLabel}>{item.label}</span>
+                                    {item.count && <span className={styles.navCount}>({item.count})</span>}
+                                </motion.div>
+                            ))}
+                        </nav>
 
-                        <div className={styles.navContainer}>
-                            <ul className={styles.navList}>
-                                <li onClick={() => handleNav("/about")}>About</li>
-                                <li onClick={() => handleNav("/#services")}>Services <span className={styles.count}>(08)</span></li>
-                                <li onClick={() => handleNav("/projects")}>Projects <span className={styles.count}>(06)</span></li>
-                                <li onClick={() => handleNav("/team")}>Team <span className={styles.count}>(08)</span></li>
-                                <li onClick={() => handleNav("/blogs")}>Blogs <span className={styles.count}>(05)</span></li>
-                                <li onClick={() => handleNav("/#contact")}>Contact</li>
-                            </ul>
-
-                            <div className={styles.rightFooter}>
-                                <div className={styles.addressBlock}>
-                                    <p className={styles.footerLabel}>Elysian Environments</p>
-                                    <a
-                                        href="https://maps.google.com"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className={styles.footerLink}
-                                    >
-                                        123 Innovation Drive<br />Design City, ST 12345
+                        <div className={styles.footer}>
+                            <div className={styles.footerGrid}>
+                                <div className={styles.footerCol}>
+                                    <p className={styles.footerTag}>Office</p>
+                                    <p>123 Innovation Drive, Design City, ST 12345</p>
+                                </div>
+                                <div className={styles.footerCol}>
+                                    <p className={styles.footerTag}>Contact</p>
+                                    <a href="mailto:hello@elysian.com">hello@elysian.com</a>
+                                    <br />
+                                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                                </div>
+                                <div className={styles.footerCol}>
+                                    <p className={styles.footerTag}>Social</p>
+                                    <a href="https://instagram.com/elysian" target="_blank" rel="noreferrer">
+                                        Instagram
                                     </a>
                                 </div>
-
-                                <div className={styles.contactBlock}>
-                                    <a href="tel:+15551234567" className={styles.footerLink} style={{ display: 'block' }}>+1 (555) 123-4567</a>
-                                    <a href="mailto:jondoe@example.com" className={styles.footerLink} style={{ display: 'block' }}>jondoe@example.com</a>
-                                </div>
-
-                                <div className={styles.socialBlock}>
-                                    <a href="#" className={styles.footerLink}>Instagram</a>
-                                    <br />
-                                    <a href="#" className={styles.footerLink}>Twitter</a>
-                                </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>
     );
 }
+
+MenuOverlay.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+};
