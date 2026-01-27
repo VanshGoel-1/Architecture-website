@@ -48,10 +48,9 @@ Desktop.ini
 # Project specific
 **/*WhatsApp Image*
 src/assets/temp/
-.prettierrc
-eslint.config.js
+
 ux_audit.py
 design_system_rec.md
 checklist.py
 
-eslint.config.js
+
