@@ -87,8 +87,7 @@
     /* EXIT = slower, softer */
     transition:
         opacity 0.6s ease,
-        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-        backdrop-filter 0.8s ease;
+        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ======================================================
@@ -111,8 +110,7 @@
     /* ENTRY = intentionally slower */
     transition:
         opacity 0.85s ease,
-        transform 1.15s cubic-bezier(0.22, 0.78, 0.22, 1),
-        backdrop-filter 1s ease;
+        transform 1.15s cubic-bezier(0.22, 0.78, 0.22, 1);
 }
 
 /* ======================================================
@@ -142,7 +140,7 @@
     transform: translateY(12px);
     opacity: 0;
 
-    will-change: transform, opacity;
+    /* will-change removed for performance */
 
     transition:
         opacity 0.5s ease,
@@ -162,7 +160,7 @@
     opacity: 0;
     transform: translateY(16px);
 
-    will-change: transform, opacity;
+    /* will-change removed for performance */
 
     transition:
         opacity 0.5s ease,

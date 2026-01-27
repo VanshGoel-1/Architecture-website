@@ -9,7 +9,7 @@ const projects = [
         area: '250,000 sq ft.',
         category: 'Residential',
         desc: 'A sophisticated blend of alpine tradition and modern luxury, creating a warm yet expansive living environment.',
-        image: '/stephan-bechert-yFV39g6AZ5o-unsplash.jpg',
+        image: '/stephan-bechert-yFV39g6AZ5o-unsplash.webp',
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const projects = [
         area: '180,000 sq ft.',
         category: 'Residential',
         desc: 'Designed to blend seamlessly with the arid landscape, offering cool respite and breathtaking desert views.',
-        image: '/ionut-vlad-idXQEOxhmvU-unsplash.jpg',
+        image: '/ionut-vlad-idXQEOxhmvU-unsplash.webp',
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const projects = [
         area: '120,000 sq ft.',
         category: 'Commercial',
         desc: 'An industrial-chic workspace that fosters creativity and collaboration in the heart of the city.',
-        image: '/im3rd-media-CbZ4EDP__VQ-unsplash.jpg',
+        image: '/im3rd-media-CbZ4EDP__VQ-unsplash.webp',
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const projects = [
         area: '300,000 sq ft.',
         category: 'Resort',
         desc: 'A luxurious coastal sanctuary designed to capture the essence of ocean living with panoramic views.',
-        image: '/iltun-huseynli-OH7GkUqiuZk-unsplash.jpg',
+        image: '/iltun-huseynli-OH7GkUqiuZk-unsplash.webp',
     },
 ];
 
