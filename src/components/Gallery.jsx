@@ -8,14 +8,14 @@ const images = [
     '/frames-for-your-heart-2d4lAQAlbDA-unsplash.webp',
     '/kam-idris-_HqHX3LBN18-unsplash.webp',
     '/spacejoy-9M66C_w_ToM-unsplash.webp',
-    '/spacejoy-PyeXkOVmG1Y-unsplash.webp',
+    '/spacejoy-XpbtQfr9Skg-unsplash.webp',
     // Duplicates to fill columns
     '/cat-han-VgyN_CWXQVM-unsplash.webp',
     '/collov-home-design-H-1j_s0dhCw-unsplash.webp',
     '/frames-for-your-heart-2d4lAQAlbDA-unsplash.webp',
     '/kam-idris-_HqHX3LBN18-unsplash.webp',
     '/spacejoy-9M66C_w_ToM-unsplash.webp',
-    '/spacejoy-PyeXkOVmG1Y-unsplash.webp',
+    '/spacejoy-XpbtQfr9Skg-unsplash.webp',
 ];
 
 // Create a massive pool of images for "infinite" feel
