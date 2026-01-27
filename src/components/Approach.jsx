@@ -58,7 +58,13 @@ export default function Approach() {
                                 </div>
                                 <div className={styles.body}>
                                     <div className={styles.imageFrame}>
-                                        <img src={step.image} alt={step.title} className={styles.image} />
+                                        <img
+                                            src={step.image}
+                                            alt={step.title}
+                                            className={styles.image}
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
                                     </div>
                                     <div className={styles.info}>
                                         <p className={styles.description} style={{ maxWidth: '65ch' }}>{step.desc}</p>

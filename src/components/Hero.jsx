@@ -54,6 +54,8 @@ export default function Hero() {
             src={projects[current].image}
             alt={projects[current].title}
             className={styles.image}
+            fetchpriority="high"
+            decoding="async"
           />
           <div className={styles.overlay} />
         </motion.div>
