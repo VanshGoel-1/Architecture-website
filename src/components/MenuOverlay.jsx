@@ -39,56 +39,67 @@ export default function MenuOverlay({ isOpen, onClose }) {
                     exit={{ y: '-100%' }}
                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
                 >
-                    <div className={styles.container}>
-                        <div className={styles.header}>
-                            <div className={styles.branding}>ELYSIAN</div>
-                            <button onClick={onClose} className={styles.closeBtn} aria-label="Close menu">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                    <path
-                                        d="M18 6L6 18M6 6l12 12"
-                                        stroke="currentColor"
-                                        strokeWidth="1.5"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </button>
+                    {/* LEFT PANEL */}
+                    <div className={styles.leftPanel}>
+                        <div className={styles.leftContent}>
+                            <div className={styles.branding}>
+                                ELYSIAN <br /> ENVIRONMENTS
+                            </div>
+
+                            <div className={styles.imageContainer}>
+                                <img
+                                    src="/Kyoto.webp"
+                                    alt="Feature"
+                                    className={styles.featureImage}
+                                />
+                            </div>
+
+                            <div className={styles.leftFooter}>
+                                <h2 className={styles.tagline}>
+                                    Designing <br /> Future Living.
+                                </h2>
+                                <p className={styles.leftCopyright}>
+                                    &copy; {new Date().getFullYear()} Elysian. <br /> All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* RIGHT PANEL */}
+                    <div className={styles.rightPanel}>
+                        <button onClick={onClose} className={styles.closeBtn} aria-label="Close menu">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+
+                        <div className={styles.navContainer}>
+                            <ul className={styles.navList}>
+                                {navItems.map((item, index) => (
+                                    <motion.li
+                                        key={item.label}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.3 + (index * 0.1) }}
+                                        onClick={() => handleNav(item.path)}
+                                    >
+                                        {item.label}
+                                        {item.count && <span className={styles.count}>({item.count})</span>}
+                                    </motion.li>
+                                ))}
+                            </ul>
                         </div>
 
-                        <nav className={styles.nav}>
-                            {navItems.map((item, index) => (
-                                <motion.div
-                                    key={item.label}
-                                    className={styles.navItem}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.1 * index + 0.4 }}
-                                    onClick={() => handleNav(item.path)}
-                                >
-                                    <span className={styles.navLabel}>{item.label}</span>
-                                    {item.count && <span className={styles.navCount}>({item.count})</span>}
-                                </motion.div>
-                            ))}
-                        </nav>
-
-                        <div className={styles.footer}>
-                            <div className={styles.footerGrid}>
-                                <div className={styles.footerCol}>
-                                    <p className={styles.footerTag}>Office</p>
-                                    <p>123 Innovation Drive, Design City, ST 12345</p>
-                                </div>
-                                <div className={styles.footerCol}>
-                                    <p className={styles.footerTag}>Contact</p>
-                                    <a href="mailto:hello@elysian.com">hello@elysian.com</a>
-                                    <br />
-                                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                                </div>
-                                <div className={styles.footerCol}>
-                                    <p className={styles.footerTag}>Social</p>
-                                    <a href="https://instagram.com/elysian" target="_blank" rel="noreferrer">
-                                        Instagram
-                                    </a>
-                                </div>
+                        <div className={styles.rightFooter}>
+                            <div>
+                                <div className={styles.footerLabel}>Socials</div>
+                                <div><a href="#" className={styles.footerLink}>Instagram</a></div>
+                                <div><a href="#" className={styles.footerLink}>LinkedIn</a></div>
+                            </div>
+                            <div>
+                                <div className={styles.footerLabel}>Enquiries</div>
+                                <div><a href="mailto:info@elysian.com" className={styles.footerLink}>info@elysian.com</a></div>
                             </div>
                         </div>
                     </div>
