@@ -21,7 +21,7 @@ const steps = [
         title: 'Technical Resolution',
         desc: 'Translating artistry into buildable reality. We develop precise technical drawings and coordinate with specialists to ensure structural integrity and seamless execution of complex details.',
         image:
-            'https://images.unsplash.com/photo-1621621667797-e06afc217fb0?q=80&w=2000&auto=format&fit=crop',
+            'spacejoy-XpbtQfr9Skg-unsplash.webp',
     },
     {
         id: '04',
