@@ -12,6 +12,20 @@ const navItems = [
     { label: 'Contact', path: '/#contact' },
 ];
 
+/**
+ * MenuOverlay Component
+ * 
+ * Full-screen navigation overlay for mobile/tablet or triggered menu interactions.
+ * 
+ * Features:
+ * - **Animations**: Uses `AnimatePresence` for smooth entry/exit transitions.
+ * - **Two-Column Layout**: Left side for branding/imagery, right side for navigation links.
+ * - **Direct & Hash Navigation**: Handles standard routes and hash anchors (e.g., /#services) with scroll-into-view logic.
+ * 
+ * Props:
+ * @param {boolean} isOpen - Controls visibility.
+ * @param {function} onClose - Callback to close the overlay.
+ */
 export default function MenuOverlay({ isOpen, onClose }) {
     const navigate = useNavigate();
 

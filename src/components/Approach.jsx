@@ -32,6 +32,16 @@ const steps = [
     },
 ];
 
+/**
+ * Approach Component
+ * 
+ * Vertical scrolling list of the firm's methodological steps.
+ * 
+ * Layout:
+ * - **Step-wise**: Each step is a distinct block (`stepWrapper`) stacked vertically.
+ * - **Sticky Effect**: Uses `position: sticky` logic (via CSS) or pure stacking context to keep steps visible as user scrolls (implied by z-indexes).
+ * - **Reveal**: Numbers fade in as they enter the viewport.
+ */
 export default function Approach() {
     return (
         <section className={styles.section}>

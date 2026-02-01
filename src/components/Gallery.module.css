@@ -26,7 +26,7 @@
 
 .galleryWrapper {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     /* Increased spacing */
     max-width: 1400px;
     /* Slightly tighter container */
@@ -35,7 +35,7 @@
     position: relative;
     z-index: 1;
     /* Images above text */
-    height: 120vh;
+    height: 150vh;
     /* Taller to allow scrolling space */
     align-items: flex-start;
     /* Align top so we can pull them down/up */
@@ -45,7 +45,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
     /* Increased vertical spacing */
     will-change: transform;
     /* Hint to browser to promote to compositing layer */

@@ -29,6 +29,15 @@ const services = [
   // The reference actually shows the 6th slot is PARTIALLY an image. I will make 6th card an image card in CSS.
 ];
 
+/**
+ * Services Component
+ * 
+ * Renders the list of architectural services provided.
+ * 
+ * Features:
+ * - **Staggered Entrance**: Uses `framer-motion` to fade in cards sequentially (`delay: index * 0.1`).
+ * - **Card Layout**: Simple grid displaying title, description, and numbering.
+ */
 export default function Services() {
   return (
     <section className={styles.section}>

@@ -21,6 +21,15 @@ const articles = [
   },
 ];
 
+/**
+ * Blog Component (Section)
+ * 
+ * Preview section for latest architecture insights.
+ * 
+ * Features:
+ * - **Article Grid**: Cards with image, tag, and title.
+ * - **Static Data**: Renders from local `articles` array.
+ */
 export default function Blog() {
   return (
     <section className={styles.section}>

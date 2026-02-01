@@ -56,6 +56,16 @@ const allProjects = [
   },
 ];
 
+/**
+ * Projects Page
+ * 
+ * Dedicated listing page for all projects.
+ * 
+ * Features:
+ * - **Separate Hero**: Custom hero section different from Home.
+ * - **Extended Grid**: Displays a larger set of projects (`allProjects`).
+ * - **Animations**: Cards animate in on scroll with `whiteInView`.
+ */
 export default function ProjectsPage() {
   return (
     <div className={styles.page}>

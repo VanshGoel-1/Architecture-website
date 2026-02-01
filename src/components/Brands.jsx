@@ -2,6 +2,15 @@ import styles from './Brands.module.css';
 
 const brands = ['Acme Corp', 'Vertigo', 'PULSE', 'Quantum', 'Celestia', 'Echo Valley'];
 
+/**
+ * Brands Component
+ * 
+ * Grid of partner brand names/logos.
+ * 
+ * Design:
+ * - Simple grid with name and action arrow.
+ * - Used to establish social proof.
+ */
 export default function Brands() {
   return (
     <section className={styles.section}>

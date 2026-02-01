@@ -23,6 +23,19 @@ const projects = [
   },
 ];
 
+/**
+ * Hero Component
+ * 
+ * Large visual carousel displayed at the top of the Home page.
+ * 
+ * Features:
+ * - **Image Carousel**: Rotates through project images every 5s (`setInterval`).
+ * - **Animations**:
+ *   - Background fades with `mode="popLayout"` for smooth cross-fades.
+ *   - "ELYSIAN" text uses a parallax-like entry animation.
+ *   - Project text animates vertically (`y` axis) on slide change.
+ * - **Controls**: Manual previous/next buttons to override auto-rotation.
+ */
 export default function Hero() {
   const [current, setCurrent] = useState(0);
 
@@ -54,7 +67,7 @@ export default function Hero() {
             src={projects[current].image}
             alt={projects[current].title}
             className={styles.image}
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
           />
           <div className={styles.cardOverlay} />

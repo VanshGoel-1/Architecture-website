@@ -27,6 +27,15 @@ const team = [
   },
 ];
 
+/**
+ * Team Component (Section)
+ * 
+ * Featured team members spotlight displayed on the landing page or about page.
+ * 
+ * Features:
+ * - **Grid Layout**: Displays member image, name, role, and a short quote.
+ * - **Static Data**: Renders from a local `team` array.
+ */
 export default function Team() {
   return (
     <section className={styles.section}>

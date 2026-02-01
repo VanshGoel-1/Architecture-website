@@ -43,6 +43,18 @@ const projects = [
     },
 ];
 
+/**
+ * Projects Component
+ * 
+ * Displays a grid of featured real estate projects with interactive hover effects.
+ * 
+ * Features:
+ * - **Responsive Grid**: Flex/Grid layout adapted for various screen sizes.
+ * - **Hover Interaction**:
+ *   - Cards display a "glass" overlay on hover.
+ *   - Details (Description, View Details button) expand from hidden state.
+ *   - Uses pure CSS modules for hover states (efficient performance).
+ */
 export default function Projects() {
     return (
         <section className={styles.section}>

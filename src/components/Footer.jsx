@@ -1,5 +1,17 @@
 import styles from './Footer.module.css';
 
+/**
+ * Footer Component
+ * 
+ * Global footer section displayed at the bottom of the application.
+ * 
+ * Structure:
+ * - **Hero Section**: Large branding title.
+ * - **Navigation Grid**: Multi-column layout of site links.
+ * - **Bottom Section**: Contact details, social links, and copyright info.
+ * 
+ * Note: Contains hardcoded links for demo purposes.
+ */
 export default function Footer() {
     return (
         <footer className={styles.footer} id="contact">

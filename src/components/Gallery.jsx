@@ -27,6 +27,26 @@ const column2 = pool.filter((_, i) => i % 4 === 1);
 const column3 = pool.filter((_, i) => i % 4 === 2);
 const column4 = pool.filter((_, i) => i % 4 === 3);
 
+
+/**
+ * Gallery Component
+ * 
+ * Implements a complex parallax scrolling effect using framer-motion.
+ * 
+ * Key Concepts:
+ * 1. **Parallax Columns**: The grid is split into 4 columns. 
+ *    - Columns 1 & 3 move UP relative to scroll.
+ *    - Columns 2 & 4 move DOWN relative to scroll.
+ *    - Uses `useTransform` to map scroll progress (0-1) to pixel values.
+ * 
+ * 2. **Physics Smoothing**: 
+ *    - Uses `useSpring` to smooth out the raw `scrollYProgress` from the browser.
+ *    - Creates a "heavy" or "fluid" feel depending on mass/damping.
+ * 
+ * 3. **Velocity Deformation (Squash & Stretch)**:
+ *    - `useVelocity` calculates how fast the user is scrolling.
+ *    - fast scroll = higher velocity = image stretches vertically.
+ */
 export default function Gallery() {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -39,8 +59,9 @@ export default function Gallery() {
     // damping: 20 = provides a subtle settling bounce without being "mushy".
     // mass: 0.8 = lighter feeling.
     const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
+        stiffness: 200,
+        damping: 20,
+        mass: 0.8,
         restDelta: 0.001
     });
 
@@ -48,11 +69,11 @@ export default function Gallery() {
 
     // Transform logic (linked to smoothProgress instead of raw scrollYProgress):
     // Col 1 & 3: Move UP (negative y) faster (approx 1.5x speed relative to scroll)
-    // Col 2 & 4: Move DOWN (positive y) slower (approx 0.5x speed opposite to scroll)
+    // Col 2 & 4: Move DOWN (positive y) at 1x speed opposite to scroll
     const y1 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : -600]);
-    const y2 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : 200]);
+    const y2 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : 400]);
     const y3 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : -750]);
-    const y4 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : 150]);
+    const y4 = useTransform(smoothProgress, [0, 1], [0, isMobile ? 0 : 500]);
 
     // Squash and Stretch Logic based on Velocity
     const velocity = useVelocity(smoothProgress);
