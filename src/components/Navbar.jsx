@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import MenuOverlay from './MenuOverlay'; // Import the overlay
 import styles from './Navbar.module.css';
-import LogoAsset from '../assets/ee_logo1.svg';
+import LogoAsset from '../assets/ee_logo.svg';
 
 /**
  * Navbar Component
