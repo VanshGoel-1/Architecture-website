@@ -9,16 +9,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
-    color: #e8dcc4;
-    /* Default to cream/beige */
+    color: #dcc495;
+    /* Darker/Review: Changed from #e8dcc4 to #decba4 for better visibility */
     transition:
         background-color 0.3s ease,
         padding 0.3s ease;
 }
 
 .lightMode {
-    color: #452b1f;
-    /* Dark brown for light pages */
+    color: #1a100c;
+    /* Darker brown (almost black) for better visibility on light pages */
 }
 
 .logoContainer {
