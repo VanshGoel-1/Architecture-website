@@ -35,8 +35,8 @@
     object-fit: contain;
     /* Use mask to allow currentColor to color the SVG asset */
     background-color: currentColor;
-    mask-image: url('../assets/ee_logo1.svg');
-    -webkit-mask-image: url('../assets/ee_logo1.svg');
+    mask-image: url('../assets/ee_logo.svg');
+    -webkit-mask-image: url('../assets/ee_logo.svg');
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-size: contain;
