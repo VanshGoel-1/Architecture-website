@@ -33,7 +33,7 @@ yarn-error.log*
 *.sw?
 
 # Testing
-test
+
 coverage/
 
 # OS specific
